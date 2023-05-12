@@ -24,8 +24,9 @@
 </head>
 <div class="header" id="top">
 	<h1>
-<!-- 		<img src="icon.png" alt="Icon" width="32" height="32"> -->
-		Seizing Serendipity: Exploiting the Value of Past Success in Off-Policy Actor-Critic
+		<img src="Figures/beeicon.png" alt="Icon" width="55" height="55">
+		Seizing Serendipity: <br>
+		Exploiting the Value of Past Success in Off-Policy Actor-Critic
 	</h1>
 	<table class="authors">
 		<tbody>
@@ -42,9 +43,9 @@
 			</tr>
 		</tbody>
 	</table>
-	<div class="links">
+<!-- 	<div class="links">
 		<a href="https://arxiv.org/" class="btn"><i class="fa">&#xf1c1;</i>&ensp;Paper</a>&emsp;<a href="https://docs.google.com/" class="btn"><i class="fa fa-television"></i>&ensp;Slides (Web)</a>&emsp;<a href="slides.pdf" class="btn"><i class="fa fa-television"></i>&ensp;Slides (PDF)</a>&emsp;<a href="https://github.com/" class="btn"><i class="fa fa-github"></i>&ensp;Code</a>
-	</div>
+	</div> -->
 </div>
 <!-- <div class="youtube-container">
 	<div class="youtube">
@@ -52,17 +53,17 @@
 	</div>
 </div> -->
 <div class="content">
-	<div class="figure" style="height: 416px; background-image: url(images/0.png);"></div>
-	<div style="margin: auto; margin-top: -24px;">
+	<!-- <div class="figure" style="height: 416px; background-image: url(images/0.png);"></div> -->
+<!-- 	<div style="margin: auto; margin-top: -24px;">
 		<p>
 			1
 		</p>
-	</div>
-	<div class="hr"></div>
+	</div> -->
+	<!-- <div class="hr"></div> -->
 	<div>
 		<h2>Abstract</h2>
 		<p class="abstract">
-			Learning $Q$-value functions plays a key role in the success of many modern off-policy deep reinforcement learning (RL) algorithms. Previous works focus on addressing the value overestimation problem, resulting from the use of function approximators and off-policy learning. Surprisingly, we observe that $Q$-value could be underestimated usually in the latter stage of the training process, due to performing Bellman update using the inferior actions from policies as compared to the more optimal samples in the replay buffer. This can potentially lead to ineffective policy learning and decreased sample efficiency. Our insight to address this issue is to incorporate sufficient exploitation of past successes while maintaining exploration optimism. We propose the Blended Exploitation and Exploration operator (BEE), a simple yet effective method that updates $Q$ value using both historical optimistic actions and current policy. The instantiations of our method in both model-free and model-based settings  outperform state-of-the-art counterparts in various continuous control tasks and  achieve strong performance in failure-prone scenarios and real-world robot tasks. 
+			Learning $Q$-value functions plays a key role in the success of many modern off-policy deep reinforcement learning (RL) algorithms. Previous works focus on addressing the value overestimation problem, resulting from the use of function approximators and off-policy learning. Surprisingly, we observe that $Q$-value could be underestimated usually in the latter stage of the training process, due to performing Bellman update using the inferior actions from policies as compared to the more optimal samples in the replay buffer. This can potentially lead to ineffective policy learning and decreased sample efficiency. Our insight to address this issue is to incorporate sufficient exploitation of past successes while maintaining exploration optimism. We propose the Blended Exploitation and Exploration operator (BEE), a simple yet effective method that updates $Q$ value using both historical optimistic actions and current policy. The instantiations of our method in both model-free and model-based settings  outperform state-of-the-art counterparts in various continuous control tasks and achieve strong performance in failure-prone scenarios and real-world robot tasks. 
 		</p>
 	</div>
 	<div class="hr"></div>
@@ -155,40 +156,62 @@
 	</div>
 	<div class="hr"></div>
 	<div>
-		<h2>Test</h2>
+		<h2>DogRun</h2>
 		<div class="figure-caption">
 			<p>
-				Test
+				BAC solves challenging Dog tasks with 38-dimensional continuous action spaces. Other baselines fails to learn meaningful behaviors.
 			</p>
 		</div>
 		<div class="content-video" style="margin-bottom: 32px">
 			<div class="content-video-container">
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/a.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/a.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/a.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/a.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/a.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/a.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/a.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/a.mp4" type="video/mp4"/>
-				</video>
+				<div class="content-video-frame medium">
+					<span style="color: #ff0000;">BAC</span></span>
+					<video playsinline="" autoplay="" loop="" preload="" muted="" width="100%">
+						<source src="Videos/DogRun/BAC.mp4" type="video/mp4"/>
+					</video>
+				</div>
+				<div class="content-video-frame medium">
+					<span>SAC</span>
+					<video playsinline="" autoplay="" loop="" preload="" muted="" width="100%">
+						<source src="Videos/DogRun/SAC.mp4" type="video/mp4"/>
+					</video>
+				</div>
+				<div class="content-video-frame medium">
+					<span>TD3</span>
+					<video playsinline="" autoplay="" loop="" preload="" muted="" width="100%">
+						<source src="Videos/DogRun/TD3.mp4" type="video/mp4"/>
+					</video>
+				</div>
+				<div class="content-video-frame medium">
+					<span>RRS</span>
+					<video playsinline="" autoplay="" loop="" preload="" muted="" width="100%">
+						<source src="Videos/DogRun/RRS.mp4" type="video/mp4"/>
+					</video>
+				</div>
+				<div class="content-video-frame medium">
+					<span>XQL</span>
+					<video playsinline="" autoplay="" loop="" preload="" muted="" width="100%">
+						<source src="Videos/DogRun/XQL.mp4" type="video/mp4"/>
+					</video>
+				</div>
 			</div>
 		</div>
+<!-- 		<div class="content-video" style="margin-bottom: 32px">
+			<div class="content-video-container">
+				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
+					<source src="Videos/DogRun/BAC.mp4" type="video/mp4"/>
+				</video>
+				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
+					<source src="Videos/DogRun/SAC.mp4" type="video/mp4"/>
+				</video>
+				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
+					<source src="Videos/DogRun/XQL.mp4" type="video/mp4"/>
+				</video>
+				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
+					<source src="Videos/DogRun/RRS.mp4" type="video/mp4"/>
+				</video>
+			</div>
+		</div> -->
 	</div>
 	<div class="hr"></div>
 	<div>
@@ -288,7 +311,7 @@
 		</div>
 	</div>
 	<div class="hr"></div>
-	<div>
+<!-- 	<div>
 		<h2>Test</h2>
 		<div class="figure" style="height: 640px; background-image: url(images/3.png);"></div>
 		<div class="figure-caption" style="margin-top: -24px;">
@@ -296,19 +319,19 @@
 			<p>Test</p>
 		</div>
 		<div class="figure" style="height: 204px; background-image: url(images/4.png); margin-top: 0px;"></div>
-	</div>
-	<div class="hr"></div>
+	</div> -->
+	<!-- <div class="hr"></div> -->
 	<div>
-		<h2>Test</h2>
+		<h2>Benchmark Results</h2>
 		<div class="figure-caption">
 			<p>
-				<p>Test</p>
+				<p>BAC in MuJoCo Benchmarks</p>
 			</p>
 		</div>
-		<div class="figure" style="height: 288px; background-image: url(images/5.png);"></div>
+		<div class="figure" style="height: 388px; background-image: url(Figures/main_res_mf_bac.png);"></div>
 	</div>
-	<div class="hr"></div>
-	<div style="margin: auto; margin-bottom: 64px; text-align: center;">
+	<!-- <div class="hr"></div> -->
+<!-- 	<div style="margin: auto; margin-bottom: 64px; text-align: center;">
 		<h2>Paper</h2>
 		Test, Test, Test<br/>
 		<span class="bold">Test</span><br/><br/>
@@ -325,15 +348,15 @@
 		<div style="margin: auto; margin-top: 32px;">
 			<a href="https://arxiv.org/abs/">View on arXiv</a>
 		</div>
-	</div>
-	<div class="hr"></div>
-	<div style="padding-bottom: 64px; text-align: center;">
+	</div> -->
+	<!-- <div class="hr"></div> -->
+<!-- 	<div style="padding-bottom: 64px; text-align: center;">
 		<h2>Citation</h2>
 		<p>
 			Test
 		</p>
 		<div id="bibtex-text" class="bibtexsection" onClick="window.getSelection().selectAllChildren(document.getElementById('bibtex-text'));">@inproceedings{Test}</div>
-	</div>
+	</div> -->
 </div>
 <footer>
 <a href="#top" class="bold">To top &UpArrow;</a>
