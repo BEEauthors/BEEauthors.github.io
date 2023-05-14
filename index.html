@@ -66,7 +66,7 @@
 			Learning $Q$-value functions plays a key role in the success of many modern off-policy deep reinforcement learning (RL) algorithms. Previous works focus on addressing the value overestimation problem, resulting from the use of function approximators and off-policy learning. Surprisingly, we observe that $Q$-value could be underestimated usually in the latter stage of the training process, due to performing Bellman update using the inferior actions from policies as compared to the more optimal samples in the replay buffer. This can potentially lead to ineffective policy learning and decreased sample efficiency. Our insight to address this issue is to incorporate sufficient exploitation of past successes while maintaining exploration optimism. We propose the Blended Exploitation and Exploration operator (BEE), a simple yet effective method that updates $Q$ value using both historical optimistic actions and current policy. The instantiations of our method in both model-free and model-based settings  outperform state-of-the-art counterparts in various continuous control tasks and achieve strong performance in failure-prone scenarios and real-world robot tasks. 
 		</p>
 	</div>
-	<div class="hr"></div>
+<!-- 	<div class="hr"></div>
 	<div>
 		<h2>Test</h2>
 		<div class="figure-caption">
@@ -153,18 +153,16 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="hr"></div>
 	<div>
-		<h2>Real-World</h2>
+		<h2>Real-World Validation</h2>
+		<h3>Smooth Road</h3>
 		<div class="figure-caption">
 			<p>
 				Test
 			</p>
 		</div>
-		
-		
-		<h3>Smooth Road</h3>
 		<div class="content-video" style="margin-bottom: 32px">
 			<div class="content-video-container">
 				<div class="content-video-frame medium" style="padding: 1.1%">
@@ -302,57 +300,47 @@
 				</div>
 			</div>
 		</div>
-<!-- 		<div class="content-video" style="margin-bottom: 32px">
-			<div class="content-video-container">
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="Videos/DogRun/BAC.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="Videos/DogRun/SAC.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="Videos/DogRun/XQL.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="Videos/DogRun/RRS.mp4" type="video/mp4"/>
-				</video>
-			</div>
-		</div> -->
 	</div>
 	<div class="hr"></div>
 	<div>
-		<h2>Test</h2>
+		<h2>HumanoidStandup</h2>
 		<div class="figure-caption">
 			<p>
-				Test
+				In the high-dimension, failure-prone HumanoidStandup task, BAC achieves returns up to ~280,000 and ~360,000 at 2.5 and 5 million steps respectively, doubling the strongest baseline. BAC swiftly achieves a stable standing pose. The SAC agent ends up with a wobbling kneeling posture, the DAC agent sits on the ground, and the RRS agent rolls around.
 			</p>
 		</div>
 		<div class="content-video" style="margin-bottom: 48px">
 			<div class="content-video-container">
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/b.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/b.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/b.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/b.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/b.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/b.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/b.mp4" type="video/mp4"/>
-				</video>
-				<video playsinline="" autoplay="" loop="" preload="" muted="" width="24.5%">
-					<source src="videos/b.mp4" type="video/mp4"/>
-				</video>
+				<div class="content-video-frame medium" style="padding: 1.1%">
+					<span style="color: #ff0000;">BAC@5M</span></span>
+					<video playsinline="" autoplay="" loop="" preload="" muted="" width="100%">
+						<source src="Videos/humanoidstandup/BEE-5M.mp4" type="video/mp4"/>
+					</video>
+				</div>
+				<div class="content-video-frame medium" style="padding: 1.1%">
+					<span style="color: #ff0000;">BAC@3M</span></span>
+					<video playsinline="" autoplay="" loop="" preload="" muted="" width="100%">
+						<source src="Videos/humanoidstandup/BEE.mp4" type="video/mp4"/>
+					</video>
+				</div>
+				<div class="content-video-frame medium" style="padding: 1.1%">
+					<span>SAC@5M</span></span>
+					<video playsinline="" autoplay="" loop="" preload="" muted="" width="100%">
+						<source src="Videos/humanoidstandup/SAC.mp4" type="video/mp4"/>
+					</video>
+				</div>
+				<div class="content-video-frame medium" style="padding: 1.1%">
+					<span>RRS@5M</span></span>
+					<video playsinline="" autoplay="" loop="" preload="" muted="" width="100%">
+						<source src="Videos/humanoidstandup/RRS.mp4" type="video/mp4"/>
+					</video>
+				</div>
+				<div class="content-video-frame medium" style="padding: 1.1%">
+					<span>DAC@5M</span></span>
+					<video playsinline="" autoplay="" loop="" preload="" muted="" width="100%">
+						<source src="Videos/humanoidstandup/DAC.mp4" type="video/mp4"/>
+					</video>
+				</div>
 			</div>
 		</div>
 	</div>
