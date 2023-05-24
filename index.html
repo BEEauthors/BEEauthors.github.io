@@ -29,9 +29,9 @@
 		Exploiting the Value of Past Success in Off-Policy Actor-Critic
 	</h1>
 	<table class="authors">
-		<tbody>
+<!-- 		<tbody>
 			<tr>
-				<td>
+				<td> -->
 					<h4>
 <!-- 						<a href="#" class="nobreak">1</a>,&ensp;
 						<a href="#" class="nobreak">2</a>&ast;,&ensp;
@@ -39,9 +39,9 @@
 						<span class="authors-affiliation">Anonymous Author(s)</span><br/>
 <!-- 						<span class="authors-affiliation" style="font-size: 0.85em;">&ast;Anonymous Author(s)</span> -->
 					</h4>
-				</td>
+<!-- 				</td>
 			</tr>
-		</tbody>
+		</tbody> -->
 	</table>
 <!-- 	<div class="links">
 		<a href="https://arxiv.org/" class="btn"><i class="fa">&#xf1c1;</i>&ensp;Paper</a>&emsp;<a href="https://docs.google.com/" class="btn"><i class="fa fa-television"></i>&ensp;Slides (Web)</a>&emsp;<a href="slides.pdf" class="btn"><i class="fa fa-television"></i>&ensp;Slides (PDF)</a>&emsp;<a href="https://github.com/" class="btn"><i class="fa fa-github"></i>&ensp;Code</a>
@@ -167,7 +167,7 @@
 		<h3>Smooth Road</h3>
 		<div class="figure-caption">
 			<p>
-				Test
+				We conducted real-world validation of BAC using a cost-effective D’Kitty robot, tasked with traversing complex terrains and reaching a target point. In this demanding setup, BAC surpasses TD3 and SAC, showcasing stable and natural gaits. In contrast, TD3 tends to adopt lower postures, such as knee walking, while SAC exhibits more oscillatory gait patterns. 
 			</p>
 		</div>
 		<div class="content-video" style="margin-bottom: 32px">
@@ -270,7 +270,7 @@
 		<h2>DogRun</h2>
 		<div class="figure-caption">
 			<p>
-				BAC solves challenging Dog tasks with 38-dimensional continuous action spaces. Other baselines fails to learn meaningful behaviors.
+				BAC successfully solves the complex Dog tasks that come with 38-dimensional continuous action spaces, where other baselines struggle to learn meaningful behaviors. To the best of our knowledge, this is the first documented result of model-free methods effectively tackling these challenging Dog tasks.
 			</p>
 		</div>
 		<div class="content-video" style="margin-bottom: 32px">
@@ -313,7 +313,7 @@
 		<h2>HumanoidStandup</h2>
 		<div class="figure-caption">
 			<p>
-				In the high-dimension, failure-prone HumanoidStandup task, BAC achieves returns up to ~280,000 and ~360,000 at 2.5 and 5 million steps respectively, doubling the strongest baseline. BAC swiftly achieves a stable standing pose. The SAC agent ends up with a wobbling kneeling posture, the DAC agent sits on the ground, and the RRS agent rolls around.
+				In the high-dimension, failure-prone HumanoidStandup task, BAC achieves returns up to ~280,000 and ~360,000 at 2.5 and 5 million steps respectively, which is 2.1x evalution scores against the strongest baseline. BAC swiftly achieves a stable standing pose. The SAC agent ends up with a wobbling kneeling posture, the DAC agent sits on the ground, and the RRS agent rolls around.
 			</p>
 		</div>
 		<div class="content-video" style="margin-bottom: 48px">
@@ -325,7 +325,7 @@
 					</video>
 				</div>
 				<div class="content-video-frame medium" style="padding: 1.1%">
-					<span style="color: #ff0000;">BAC@3M</span></span>
+					<span style="color: #ff0000;">BAC@2.5M</span></span>
 					<video playsinline="" autoplay="" loop="" preload="" muted="" width="100%">
 						<source src="Videos/humanoidstandup/BEE.mp4" type="video/mp4"/>
 					</video>
@@ -364,11 +364,27 @@
 	<!-- <div class="hr"></div> -->
 	<div>
 		<h2>Benchmark Results</h2>
+		<div class="figure-caption">
+			<p>
+			We propose BAC (model-free algorithm) and MB-BAC (model-based algorithm) based on the proposed BEE operator. The experimental results on several continuous control benchmark tasks illustrate the effectiveness of the BEE operator across both model-based and model-free paradigms.
+			</p>
+		</div>
 		<h3>BAC in MuJoCo Benchmarks</h3>
+		<div class="figure-caption">
+			<p>
+				We evaluate BAC and five state-of-the-art baselines on a set of MuJoCo continuous control tasks, including Hopper, Walker2d, Swimmer, Ant, Humanoid, and HumanoidStandup. BAC surpasses all baselines in terms of eventual performance, coupled with better sample efficiency.
+			</p>
+		</div>
 		<div class="figure-caption">
 			<div class="figure" style="height: 388px; background-image: url(Figures/main_res_mf_bac.png);"></div>
 		</div>
+		
 		<h3>MB-BAC in MuJoCo Benchmarks</h3>
+		<div class="figure-caption">
+			<p>
+				We evaluate the performance of MB-BAC, against six popular model-based and model-free baselines. The results showcases that MB-BAC learns faster than other modern model-based RL methods and yields promising asymptotic performance compared with model-free counterparts. These results highlights the universality of the BEE operator.
+			</p>
+		</div>
 		<div class="figure-caption">
 			<div class="figure" style="height: 199px; background-image: url(Figures/main_res_mb_bac.png);"></div>
 		</div>
