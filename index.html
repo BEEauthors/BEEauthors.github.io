@@ -238,6 +238,72 @@
 		</div>
 	</div>
 	<div class="hr"></div>
+	<style>
+		table.gifs {
+			margin: auto;
+		}
+		table.gifs > tbody > tr > td {
+			padding: 0;
+			margin: 0;
+		}
+		table.gifs > tbody > tr > td > div {
+			padding: 0;
+			margin: 0px;
+			width: 100px;
+			height: 100px;
+			min-height: 0px;
+		}
+	</style>
+	<div>
+		<h2>Behavior Visualizations of BAC in a Variety of Benchmark Tasks</h2>
+		<div class="figure-caption">
+			<table class="gifs">
+				<tbody>
+					<tr>
+						<td><div class="figure" style="background-image: url(Figures/gifs/AdroitDoor.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/AdroitHammer.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/AdroitPen.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/Ant-v2.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/CheetahRun.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/DogRun.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/HardKitty.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/HopperStand.gif);"></div></td>
+					</tr>
+					<tr>
+						<td><div class="figure" style="background-image: url(Figures/gifs/Humanoid.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/LiftCube.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/MediumDKitty.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/PandaReachJoints.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/assembly.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/basketball-v2-goal-observable.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/button-press.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/coffee-push-v2-goal-observable.gif);"></div></td>
+					</tr>
+					<tr>
+						<td><div class="figure" style="background-image: url(Figures/gifs/dooropen.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/draweropen.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/hammer-v2-goal-observable.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/hand-insert-v2-goal-observable.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/humanoidrun392.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/humanoidwalk_785.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/myoHandKeyTurnRandom-v0.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/myoHandPenTwirlFixed-v0.gif);"></div></td>
+					</tr>
+					<tr>
+						<td><div class="figure" style="background-image: url(Figures/gifs/myoHandPoseFixed-v0.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/pickcube.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/pickplace.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/quadrupedwalk.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/reacherhard.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/stackcube.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/TurnFaucet.gif);"></div></td>
+						<td><div class="figure" style="background-image: url(Figures/gifs/windowopen.gif);"></div></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="hr"></div>
 	<div>
 		<h2>Benchmark Results</h2>
 		<div class="figure-caption">
@@ -272,7 +338,7 @@
 			</p>
 		</div>
 		<div class="figure-caption">
-			<div class="figure" style="height: 599px; background-image: url(Figures/res_dmcontrol.png);"></div>
+			<div class="figure" style="height: 500px; background-image: url(Figures/res_dmcontrol.png);"></div>
 		</div>
 		
 		<h3>BAC in Meta-World Benchmark Tasks</h3>
@@ -282,13 +348,13 @@
 			</p>
 		</div>
 		<div class="figure-caption">
-			<div class="figure" style="height: 1040px; background-image: url(Figures/res_metaworld.png);"></div>
+			<div class="figure" style="height: 500px; background-image: url(Figures/res_metaworld.png);"></div>
 		</div>
 		
 		<h3>BAC in Adroit Benchmark Tasks</h3>
 		<div class="figure-caption">
 			<p>
-				We benchmark BAC on 6 goal-conditioned manipulation tasks from Adroit. BAC consistently outperforms SAC and TD3 across all tasks.
+				BAC consistently outperforms on 3 dexterous hand manipulation tasks from Adroit.
 			</p>
 		</div>
 		<div class="figure-caption">
@@ -298,17 +364,17 @@
 		<h3>BAC in MyoSuite Benchmark Tasks</h3>
 		<div class="figure-caption">
 			<p>
-				We benchmark BAC on 5 goal-conditioned manipulation tasks from MyoSuite. BAC consistently outperforms SAC and TD3 across all tasks.
+				Notably, BAC shines on 5 challenging tasks in controlling muscles and bones from MyoSuite.
 			</p>
 		</div>
 		<div class="figure-caption">
-			<div class="figure" style="height: 350px; background-image: url(Figures/res_myosuite.png);"></div>
+			<div class="figure" style="height: 200px; background-image: url(Figures/res_myosuite.png);"></div>
 		</div>
 		
 		<h3>BAC in ManiSkill2 Benchmark Tasks</h3>
 		<div class="figure-caption">
 			<p>
-				We benchmark BAC on 5 goal-conditioned manipulation tasks from ManiSkill2. BAC consistently outperforms SAC and TD3 across all tasks.
+				BAC shows superiority on 5  manipulation tasks from ManiSkill2.
 			</p>
 		</div>
 		<div class="figure-caption">
@@ -318,7 +384,7 @@
 		<h3>BAC in Shadow Dexterous Hand Benchmark Tasks</h3>
 		<div class="figure-caption">
 			<p>
-				We benchmark BAC on 3 goal-conditioned manipulation tasks from Shadow Dexterous Hand. BAC consistently outperforms SAC and TD3 across all tasks.
+				BAC consistently outperforms on 3 dexterous hand manipulation tasks from Shadow Dexterous Hand Suite.
 			</p>
 		</div>
 		<div class="figure-caption">
